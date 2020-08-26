@@ -1,0 +1,121 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - PsuWebApplication</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+
+    <div id="wrapper">
+        <div id="header" class="position-sticky">
+
+            <nav class="navbar navbar-expand-lg navbar-light container-fluid mx-auto">
+                <a class="navbar-brand nav__brand" href="#">
+                    <div class="nav__brand">
+                        <img src="~/files/imagebot.svg" class=" nav__logo" alt="">
+                        <p class="nav__word"><b>ООО «МаксСтройТехнология»</b></p>
+                    </div>
+                </a>
+
+                <button class="navbar-toggler second-button" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                    <div class="animated-icon2"><span></span><span></span><span></span><span></span></div>
+                </button>
+
+                <hr />
+
+                <div class="collapse navbar-collapse nav_first_menu" id="navbarTogglerDemo02">
+                    <hr />
+                    <ul class="navbar-nav mr-auto mt-2 mt-lg-0 mx-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Услуги и цены</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Контакты</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">О нас</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Портфолио</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <a href="tel:+375295816692">
+                <div class="nav__contact">
+                    <img src="~/files/contact.svg" class="nav_contact_image d-inline-block" alt="">
+                    <div class="nav_contact_number d-inline-block">
+                        <p>Контактные данные:</p>
+                        <p>+375 (29) 581-66-92</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div id="content">
+            @RenderBody()
+        </div>
+        <div id="footer">
+            <div class="container">
+                <div class="row justify-content-center pb-3">
+                    <div class="col-11 col-sm-8 col-md-5 col-lg-4 px-3 pt-3">
+                        <b>ООО «МаксСтройТехнология»</b>
+                        <hr />
+                        <p>номер: +375 (29) 581-66-92</p>
+                        <p>email: contact.maxstroyteh@gmail.com</p>
+                    </div>
+                    <div class="col-11 col-sm-8 col-md-4 col-lg-3 px-3 pt-3">
+                        <b>Информация</b>
+                        <hr />
+                        <div>
+                            <a href="https://www.instagram.com/maxstroyteh_by/" target="_blank"><img src="~/files/Social/instagram.svg" class="footer_social_logo" alt=""></a>
+                            <a href="page/help.html" target="_blank"><img src="~/files/Social/whatsapp.svg" class="footer_social_logo" alt=""></a>
+                            <a href="page/help.html" target="_blank"><img src="~/files/Social/viber.svg" class="footer_social_logo" alt=""></a>
+                        </div>
+                        @*<p><a asp-area="" asp-controller="Home" asp-action="Index">Связаться с нами</a></p>*@
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid footer__copyright text-center py-2">
+                &copy; 2020 Copyright: ООО «МаксСтройТехнология»
+            </div>
+        </div>
+    </div>
+
+    @*
+        <header>
+            <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+                <div class="container">
+                    <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">PsuWebApplication</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                        <ul class="navbar-nav flex-grow-1">
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <div class="container">
+            <main role="main" class="pb-3">
+                @RenderBody()
+            </main>
+        </div>
+    *@
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
